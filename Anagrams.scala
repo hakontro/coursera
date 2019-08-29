@@ -60,7 +60,8 @@ object Anagrams {
    */
   lazy val dictionaryByOccurrences: Map[Occurrences, List[Word]] =
     dictionary.groupBy(element => wordOccurrences(element))
-
+// comment
+  // second comment
   /** Returns all the anagrams of a given word. */
   def wordAnagrams(word: Word): List[Word] = {
     val opt = dictionaryByOccurrences get wordOccurrences(word)
@@ -97,7 +98,7 @@ object Anagrams {
       x <- xs
     } yield accs ::: x
   }
-
+//third
   def combo_list_of_pair(pr:(Char,Int)): List[Occurrences] = {
     val res = for{
       ctr <- 0 until pr._2
